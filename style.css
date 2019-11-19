@@ -1,0 +1,31 @@
+body{
+	font-family:Arial;
+}
+
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+ul.menu{
+	background:gray;
+	height:50px;
+}
+
+ul.menu li{
+	float:left;
+}
+
+ul.menu li a{
+	display:block;
+	font-size:14px;
+	color:#fff;
+	padding:0 15px;
+	line-height:50px;
+}
