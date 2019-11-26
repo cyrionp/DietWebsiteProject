@@ -14,18 +14,70 @@ a{
 }
 
 ul.menu{
-	background:gray;
+	background:#fff;
 	height:50px;
 }
 
-ul.menu li{
+ul.menu >li{
 	float:left;
+	height:50px;
+	position:relative;
 }
 
-ul.menu li a{
+ul.menu >li >a{
 	display:block;
 	font-size:14px;
-	color:#fff;
+	color:gray;
 	padding:0 15px;
 	line-height:50px;
 }
+
+ul.menu ul{
+	background:#639C33;
+	width:200px;
+	position:absolute;
+	top:30px;
+	left:0;
+	opacity:0;
+	transition: 250ms all;
+	visibility:hidden;
+}
+
+ul.menu ul li{
+	position:relative;
+}
+
+ul.menu ul li a{
+	display:block;
+	padding:7px 12px;
+	color:#fff;
+	font-size:14px;
+}
+
+ul.menu >li ul ul{
+	top:0;
+	left:180px;
+}
+
+ul.menu >li:hover >ul{
+	visibility:visible;
+	opacity:1;
+	top:50px;
+}
+
+ul.menu ul li:hover >ul{
+	visibility:visible;
+	opacity:1;
+	left:200px;
+	background:#73a32a;
+}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
