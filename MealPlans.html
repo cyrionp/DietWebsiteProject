@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<title>Eating Well</title>
+
+<meta name="author" content="Abdulkadir DURMAZ">
+<meta name="description" content="Online diet recommendations">
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+ 
+
+</HEAD>
+<BODY>
+
+
+<div align="center">
+<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+<ul class="menu">
+<li>
+<a href="#">Healthy Recipes</a>
+	<ul>
+	<li>
+	<a href="BreakfastRecipes.html">Breakfast Recipes</a>
+	</li>
+	<li>
+	<a href="LunchRecipes.html">Lunch Recipes</a>
+	</li>
+	<li>
+	<a href="DinnerRecipes.html">Dinner Recipes</a>
+	</li>
+	<li>
+	<a href="#">Appetizer Recipes</a>
+		<ul>
+		<li>
+		<a href="ar_SausageBalls.html">Sausage Balls</a>
+		</li>
+		<li>
+		<a href="ar_OnionBalls.html">Onion Rings</a>
+		</li>
+		</ul>
+	</li>
+	<li>
+	<a href="#">Dessert Recipes</a>
+		<ul>
+		<li>
+		<a href="dr_Oatmel-ApplesauceCake.html">Oatmeal-Applesauce Cake</a>
+		</li>
+		<li>
+		<a href="dr_Apple-PumpkinMuffins.html">Apple-Pumpkin Muffins</a>
+		</li>
+		</ul>
+	</li>
+	</ul>
+</li>
+<li>
+<a href="WeightLoss.html">Weight Loss</a>
+</li>
+<li>
+<a href="MealPlans.html">Meal Plans</a>
+</li>
+<li>
+<a href="aboutus.html">About Us</a>
+</li>
+</ul>
+</div>
+
+<div align="center">
+<br><br>
+<h2>How Many Calories Should You Eat Per Day to Lose Weight?</h2>
+<br><br>
+Gender &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Age<br>
+<select name="sex" id="sex">
+	<option value="female" id="female">Female</option>
+	<option value="male" id="male">Male</option>
+</select>
+&emsp;&emsp;&emsp;&emsp;
+<input type="text" size="3" name="age" id="age" onkeypress='return event.charCode>= 48 &&event.charCode<= 57'>
+<br><br>
+Weight<br>
+<input type="text" size="25" name="weight" id="weight" placeholder="Pounds..." onkeypress='return event.charCode>= 48 &&event.charCode<= 57'>
+<br><br>
+Height<br>
+<input type="text" size="10" name="feet" id="feet" placeholder="Feet..." onkeypress='return event.charCode>= 48 &&event.charCode<= 57'>
+<input type="text" size="10" name="inch" id="inch" placeholder="Inches..." onkeypress='return event.charCode>= 48 &&event.charCode<= 57'>
+<br><br>
+Activity<br>
+<select name="activity" id="selectActivity">
+	<option value="1.2">Sedentary</option>
+	<option value="1.375">Lightly Active</option>
+	<option value="1.55">Moderately Active</option>
+	<option value="1.725">Very Active</option>
+	<option value="1.9">Extremely Active</option>
+</select>
+<br><br>
+<button id="calculate">CALCULATE</button>
+
+<br><br>
+<script>
+var sex=document.querySelector("#sex");
+var inch = document.querySelector("#inch");
+var weight = document.querySelector("#weight");
+var age = document.querySelector("#age");
+var activity=document.querySelector("#selectActivity");
+var calculate=document.querySelector("#calculate");
+
+    calculate.onclick=function(){
+        if(sex.value=="male"){
+         var bmrCalc=(65+(6.23*weight.value)+(12.7*inch.value)-(6.8*age.value))/100;
+         var result=bmrCalc*Number(activity.value);
+         document.getElementById("resultText").innerHTML=result.toFixed(2);
+        }
+
+        else if(sex.value=="female"){
+         var bmrCalc=655+(4.35*weight.value)+(4.7*inch.value)-(4.7*age.value);
+         var result=bmrCalc*Number(activity.value);
+         document.getElementById("resultText").innerHTML=result.toFixed(2);
+        }
+	}
+	
+</script>
+
+You BMR is <p id="resultText"></p>
+<br><br>
+</div>
+</BODY>
+</HTML>

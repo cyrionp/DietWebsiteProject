@@ -16,12 +16,17 @@ a{
 ul.menu{
 	background:#fff;
 	height:50px;
+	
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
 }
 
 ul.menu >li{
 	float:left;
 	height:50px;
 	position:relative;
+	width:200px;
 }
 
 ul.menu >li >a{
@@ -30,6 +35,7 @@ ul.menu >li >a{
 	color:gray;
 	padding:0 15px;
 	line-height:50px;
+	
 }
 
 ul.menu ul{
@@ -72,6 +78,41 @@ ul.menu ul li:hover >ul{
 	background:#73a32a;
 }
 
+ul.menu ul li a:hover{
+	color:pink;
+	background-color:red;
+}
+
+h2{
+	color:#639C33;
+	bold;
+}
+
+.recipeImage{
+	width:30%;
+	height:45%;
+}
+
+video{
+	width:50%;
+	height:50%;
+}
+
+#container {
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+}
+
+input[type=text] {
+	border-radius: 4px;
+}
+
+input[type=text]:focus {
+	border: 3px solid red;
+}
 
 	
 	
